@@ -1,0 +1,16 @@
+<p>Votre question est : <%= params[:reponse] %> </p>
+
+
+<% if params[:reponse] == "I am going to work"%>
+  <p>GREAT</p>
+
+<% elsif params[:reponse].include?("?")%>
+  <p>Silly question, get dressed and go to work!</p>
+
+
+<% else %>
+  <p>"I don't care, get dressed and go to work!"</p>
+
+<%end %>
+
+<%= link_to "Retourner a la question", ask_path %>
